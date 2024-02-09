@@ -51,7 +51,7 @@ $htmlContent = '<!DOCTYPE html>
 <title>color</title>
 <style>
 body { background-color: #070d0d; color: #232323; }
-h2 { color: #fff }
+h2 { color: #bdbdbd }
 .gradient-container { display: flex; flex-direction: column; }
 .gradient-row { display: flex; flex-direction: row; }
 .gradient-box { width: 80px; height: 80px; margin: 2px; }
@@ -64,7 +64,7 @@ foreach ($gradients as $gradientSet) {
     $endColor = $gradientSet[1];
     $gradient = generateGradient($startColor, $endColor, $steps);
     $htmlContent .= '<div class="gradient-container">';
-    $htmlContent .= '<h2>'.$startColor.'-'.$endColor.'</h2>';
+    $htmlContent .= '<h2>'.'#'.$startColor.' - '.'#'.$endColor.'</h2>';
     $htmlContent .= generateGradientHTML($gradient);
     $htmlContent .= '</div>';           
 }
