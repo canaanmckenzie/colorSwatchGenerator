@@ -20,6 +20,8 @@ $gradients = array(
     array("0000ff", "ffff00"),
     array("000000", "ff00ff"),
     array("bdbdbd", "15bb84"),
+    array("ffffff", "000000"),
+    array("0c000c", "3f003f"),
 );
 
 $steps = 20; // Number of steps in the gradient
