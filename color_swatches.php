@@ -1,9 +1,23 @@
 <?php
+//author: Canaan McKenzie
+//date: 2024
+//controls for startRGB, endRGB
+//array[0] - startRGB, array[1] - endRGB
+/* 
+$gradients = array(
+    array("df1f00", "00ff00"),
+);
+*/
+
+$numGradients =  100; //maybe make this a button?
+$steps = 20; // Number of steps in the gradient
+
+
+
 // generate a random hex color
 function generateRandomHex(){
     return str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
 }
-
 
 // generate a gradient of hex codes between two colors
 function generateGradient($startColor, $endColor, $steps) {
@@ -21,30 +35,12 @@ function generateGradient($startColor, $endColor, $steps) {
     return $gradient;
 }
 
-//maybe make this a button? blade templates?
-$numGradients =  100;
-
 //each array is a hex code for a color, array[0] - startRGB, arrray[1] - endRGB
 for ($i = 0; $i < $numGradients; $i++){
     $startColor = generateRandomHex();
     $endColor = generateRandomHex();
     $gradients[] = array($startColor,$endColor);
 }
-
-/*
-$gradients = array(
-    array("df1f00", "00ff00"),
-    array("0000ff", "ffff00"),
-    array("000000", "ff00ff"),
-    array("bdbdbd", "15bb84"),
-    array("ffffff", "000000"),
-    array("0c000c", "3f003f"),
-);
-*/
-
-
-$steps = 20; // Number of steps in the gradient
-
 
 //generate html
 $htmlContent = '<!DOCTYPE html>
