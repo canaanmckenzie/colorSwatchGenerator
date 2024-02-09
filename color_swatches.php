@@ -9,10 +9,8 @@ $gradients = array(
 );
 */
 
-$numGradients =  100; //maybe make this a button?
+$numGradients =  1000; //maybe make this a button?
 $steps = 20; // Number of steps in the gradient
-
-
 
 // generate a random hex color
 function generateRandomHex(){
