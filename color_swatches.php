@@ -9,7 +9,7 @@ $gradients = array(
 );
 */
 
-$numGradients =  1000; 
+$numGradients =  10000; 
 $steps = 20; // Number of steps in the gradient
 
 // generate a random hex color
