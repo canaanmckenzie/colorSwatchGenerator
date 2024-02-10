@@ -9,7 +9,7 @@ $gradients = array(
 );
 */
 
-$numGradients =  1000; //maybe make this a button?
+$numGradients =  1000; 
 $steps = 20; // Number of steps in the gradient
 
 // generate a random hex color
@@ -73,7 +73,7 @@ function generateGradientHTML($gradient){
     $html = '<div class="gradient-row">';
     foreach($gradient as $color) {
         $html .= 
-              '<div class="gradient-box" style="background-color:'
+              '<div class="gradient-box" style=" font-size: 0.9em; background-color:'
               .$color.';">'.$color.'</div>';
     }
     $html .= '</div>';
